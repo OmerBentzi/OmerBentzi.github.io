@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <title>Omer Ben Simon — AI Security Research Engineer</title>
+  <meta name="description" content="Portfolio of Omer Ben Simon — AI Security Research Engineer. M.Sc. in Intelligent Systems (AI) & Data Science. Research in adversarial ML, MCP vulnerabilities, medical-imaging deep learning, and applied AI." />
+  <meta name="author" content="Omer Ben Simon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Omer Ben Simon — AI Security Research Engineer" />
+  <meta property="og:description" content="AI Security Research Engineer. Adversarial ML, MCP vulnerability research, deep learning." />
+  <meta property="og:url" content="https://omerbentzi.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2300d4ff'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%230a0e1a'/><text x='50%25' y='54%25' text-anchor='middle' font-family='ui-monospace,Menlo,monospace' font-size='34' font-weight='800' fill='url(%23g)' dominant-baseline='middle'>O</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- noise & grid layers -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"><div class="cursor-dot"></div></div>
+
+  <!-- nav -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Home">
+      <span class="brand-mark">O</span>
+      <span class="brand-name">omer<span class="accent">.</span>bensimon</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about"><span class="num">01</span> about</a>
+      <a href="#expertise"><span class="num">02</span> expertise</a>
+      <a href="#work"><span class="num">03</span> work</a>
+      <a href="#research"><span class="num">04</span> research</a>
+      <a href="#contact"><span class="num">05</span> contact</a>
+    </nav>
+    <a class="btn btn-ghost nav-cta" href="#contact">
+      <span>Get in touch</span>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about" data-close>01 — about</a>
+    <a href="#expertise" data-close>02 — expertise</a>
+    <a href="#work" data-close>03 — work</a>
+    <a href="#research" data-close>04 — research</a>
+    <a href="#contact" data-close>05 — contact</a>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="net" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <div class="hero-tag reveal">
+          <span class="dot"></span>
+          <span class="mono">$ whoami — available for collaborations</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line reveal" style="--d:.05s">Omer&nbsp;Ben&nbsp;Simon.</span>
+          <span class="line reveal gradient" style="--d:.15s">I break&nbsp;<em>and</em>&nbsp;build</span>
+          <span class="line reveal" style="--d:.25s">intelligent systems.</span>
+        </h1>
+
+        <p class="hero-sub reveal" style="--d:.4s">
+          AI Security Research Engineer working at the intersection of
+          <span class="hl">adversarial ML</span>,
+          <span class="hl">LLM agent security</span>, and
+          <span class="hl">applied deep learning</span>.
+          M.Sc. in Intelligent Systems (AI) &amp; Data Science.
+        </p>
+
+        <div class="hero-cta reveal" style="--d:.55s">
+          <a class="btn btn-primary magnet" href="#work">
+            <span>See selected work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-ghost magnet" href="#contact">
+            <span>Get in touch</span>
+          </a>
+        </div>
+
+        <div class="hero-meta reveal" style="--d:.7s">
+          <a href="https://github.com/OmerBentzi" target="_blank" rel="noopener" class="meta-link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.99 5.24.99 11.51c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53v-1.86c-3.05.66-3.69-1.47-3.69-1.47-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.08-.66.08-.66 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.7-1.48-2.43-.28-4.99-1.21-4.99-5.39 0-1.19.43-2.16 1.13-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3.02 1.12.88-.24 1.81-.36 2.74-.37.93.01 1.86.13 2.74.37 2.1-1.41 3.02-1.12 3.02-1.12.6 1.5.22 2.61.11 2.89.7.76 1.13 1.73 1.13 2.92 0 4.19-2.56 5.1-5 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.2.64.76.53 4.36-1.45 7.49-5.56 7.49-10.41C23.01 5.24 18.27.5 12 .5z"/></svg>
+            <span>github.com/OmerBentzi</span>
+          </a>
+          <a href="https://www.linkedin.com/in/omer-ben-simon/" target="_blank" rel="noopener" class="meta-link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <span>linkedin/omer-ben-simon</span>
+          </a>
+          <a href="mailto:o.bensimon@adversa.ai" class="meta-link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>o.bensimon@adversa.ai</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="mono">scroll</span>
+        <span class="line-down"></span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <header class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="reveal">
+            I'm an <strong>AI Security Research Engineer</strong> who treats security like product:
+            shipped, measured, and grounded in real systems. My day-to-day moves between
+            <em>adversarial ML</em>, <em>LLM-agent / MCP attack surface</em>, and
+            <em>applied deep learning</em> on hard, real-world data.
+          </p>
+          <p class="reveal" style="--d:.1s">
+            I trained as a researcher (M.Sc. in Intelligent Systems &amp; Data Science) and
+            ship as an engineer. I like clean experiments, calibrated metrics, and the
+            quiet satisfaction of an attack that finally works — usually right after
+            patching the model that was supposed to be safe.
+          </p>
+
+          <div class="terminal reveal" style="--d:.2s">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <span class="terminal-title">~ /omer — zsh</span>
+            </div>
+            <pre class="terminal-body"><span class="t-prompt">omer@adversa</span> <span class="t-arrow">~</span> <span class="t-cmd">whoami --json</span>
+<span class="t-out">{
+  "name":     "Omer Ben Simon",
+  "role":     "AI Security Research Engineer",
+  "edu":      "M.Sc., Intelligent Systems (AI) &amp; Data Science",
+  "focus":    ["adversarial ML", "LLM/MCP security", "deep learning"],
+  "stack":    ["Python", "PyTorch", "TypeScript", "FastAPI"],
+  "shipping": true
+}</span></pre>
+          </div>
+        </div>
+
+        <aside class="about-stats">
+          <div class="stat reveal" style="--d:.05s">
+            <div class="stat-num"><span data-count="24">0</span>+</div>
+            <div class="stat-label">public repositories</div>
+          </div>
+          <div class="stat reveal" style="--d:.15s">
+            <div class="stat-num">M<span class="muted">.</span>Sc<span class="muted">.</span></div>
+            <div class="stat-label">AI &amp; Data Science</div>
+          </div>
+          <div class="stat reveal" style="--d:.25s">
+            <div class="stat-num"><span data-count="3">0</span></div>
+            <div class="stat-label">core research areas</div>
+          </div>
+          <div class="stat reveal" style="--d:.35s">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">curiosity loops</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section" id="expertise">
+      <header class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Expertise<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <div class="cards">
+        <article class="card tilt reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>AI Security &amp; Adversarial ML</h3>
+          <p>Red-teaming LLMs and ML pipelines: prompt injection, jailbreaks, model extraction, evasion &amp; poisoning, and the boring-but-deadly supply-chain stuff in between.</p>
+          <ul class="chips">
+            <li>LLM red-team</li><li>Adversarial examples</li><li>Model robustness</li><li>Eval harnesses</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.08s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+          </div>
+          <h3>LLM Agents &amp; MCP</h3>
+          <p>Tool-using agents, the Model Context Protocol attack surface, sandbox escapes, and where capability and authority quietly come apart in agent stacks.</p>
+          <ul class="chips">
+            <li>MCP</li><li>Tool-use safety</li><li>Agent eval</li><li>Sandboxing</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.16s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Deep Learning &amp; CV</h3>
+          <p>From topology-preserving classifiers on 3D ultrasound to pose-estimation pipelines and knowledge distillation: building models that survive contact with real data.</p>
+          <ul class="chips">
+            <li>PyTorch</li><li>EfficientNet</li><li>Distillation</li><li>Calibration</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal" style="--d:.24s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M2 17h20v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2z"/><path d="m9 11 2 2 4-4"/></svg>
+          </div>
+          <h3>Engineering &amp; Tooling</h3>
+          <p>Research code that doesn't rot: typed Python, FastAPI services, TypeScript front-ends, reproducible experiments, and CI that actually catches things.</p>
+          <ul class="chips">
+            <li>Python</li><li>TypeScript</li><li>FastAPI</li><li>Docker</li><li>GitHub Actions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="section" id="work">
+      <header class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Selected work<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <div class="projects">
+
+        <article class="project reveal">
+          <div class="project-meta">
+            <span class="mono small">// 2026 · research</span>
+            <h3>Topology-Preserving DL for OASI Classification</h3>
+            <p>EAS-vs-IAS subtype classification on operator-selected 2D frames from 3D transperineal ultrasound. EfficientNet-B3 + CLAHE + focal loss; patient-level splits, calibration, multi-seed ablations, and statistical tests done right.</p>
+            <ul class="chips">
+              <li>PyTorch</li><li>EfficientNet</li><li>Medical Imaging</li><li>Calibration</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/OmerBentzi/topology-preserving-oasi-classification" target="_blank" rel="noopener" class="btn btn-mini">
+                <span>Source</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-art project-art-1" aria-hidden="true">
+            <div class="art-grid"></div>
+            <div class="art-shape s1"></div>
+            <div class="art-shape s2"></div>
+            <span class="art-label mono">[ EfficientNet-B3 · focal-loss · CLAHE ]</span>
+          </div>
+        </article>
+
+        <article class="project reveal flip">
+          <div class="project-meta">
+            <span class="mono small">// 2025 · security research</span>
+            <h3>MCP Vulnerability Lab</h3>
+            <p>A research playground for the Model Context Protocol attack surface — tool-poisoning, capability confusion, server-side prompt injection, and the cracks between agent and host.</p>
+            <ul class="chips">
+              <li>MCP</li><li>LLM agents</li><li>Python</li><li>Red team</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/OmerBentzi/mcp-vulnerability-lab" target="_blank" rel="noopener" class="btn btn-mini">
+                <span>Source</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-art project-art-2" aria-hidden="true">
+            <div class="art-orbit"><span></span><span></span><span></span></div>
+            <span class="art-label mono">[ MCP · agent-tooling · sandbox-escape ]</span>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-meta">
+            <span class="mono small">// 2025 · tooling</span>
+            <h3>RepoLLM</h3>
+            <p>Talk to a repository like a senior engineer who just walked in: a TypeScript-first system that turns a git tree into a queryable knowledge surface for code understanding.</p>
+            <ul class="chips">
+              <li>TypeScript</li><li>LLM</li><li>Retrieval</li><li>Code intel</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/OmerBentzi/RepoLLM" target="_blank" rel="noopener" class="btn btn-mini">
+                <span>Source</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-art project-art-3" aria-hidden="true">
+            <div class="art-tree"></div>
+            <span class="art-label mono">[ git-tree · embeddings · TS ]</span>
+          </div>
+        </article>
+
+        <article class="project reveal flip">
+          <div class="project-meta">
+            <span class="mono small">// 2024 · ml</span>
+            <h3>Knowledge Distillation</h3>
+            <p>Compressing a heavyweight teacher into a student that's fast enough to actually deploy — without throwing away the calibration the teacher worked so hard for.</p>
+            <ul class="chips">
+              <li>PyTorch</li><li>Distillation</li><li>Notebook-first</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/OmerBentzi/Knowledge_Distillation" target="_blank" rel="noopener" class="btn btn-mini">
+                <span>Source</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-art project-art-4" aria-hidden="true">
+            <div class="art-funnel"></div>
+            <span class="art-label mono">[ teacher → student ]</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- mini grid of more repos -->
+      <h3 class="sub-head"><span class="mono">// more</span> from the lab</h3>
+      <div class="mini-grid">
+        <a class="mini reveal" href="https://github.com/OmerBentzi/Heart_Disease_Prediction" target="_blank" rel="noopener">
+          <span class="mini-name">Heart-Disease-Prediction</span>
+          <span class="mini-desc">Tabular ML pipeline · feature engineering · model comparison.</span>
+          <span class="mini-tag">Jupyter</span>
+        </a>
+        <a class="mini reveal" style="--d:.05s" href="https://github.com/OmerBentzi/DeadliftsApp" target="_blank" rel="noopener">
+          <span class="mini-name">DeadliftsApp</span>
+          <span class="mini-desc">Pose-tracked deadlift form analyzer with MediaPipe + scikit-learn.</span>
+          <span class="mini-tag">Python · CV</span>
+        </a>
+        <a class="mini reveal" style="--d:.1s" href="https://github.com/OmerBentzi/knowledge-source-system" target="_blank" rel="noopener">
+          <span class="mini-name">Knowledge-Source-System</span>
+          <span class="mini-desc">Source-of-truth retrieval &amp; ranking for grounded AI assistants.</span>
+          <span class="mini-tag">Python</span>
+        </a>
+        <a class="mini reveal" style="--d:.15s" href="https://github.com/OmerBentzi/Automatiq_ai" target="_blank" rel="noopener">
+          <span class="mini-name">Automatiq_ai</span>
+          <span class="mini-desc">Workflow automation experiments around LLM-orchestrated tasks.</span>
+          <span class="mini-tag">Python</span>
+        </a>
+        <a class="mini reveal" style="--d:.2s" href="https://github.com/OmerBentzi/PCA" target="_blank" rel="noopener">
+          <span class="mini-name">PCA &amp; LDA</span>
+          <span class="mini-desc">Dimensionality reduction with 3D visualization &amp; LDA discriminants.</span>
+          <span class="mini-tag">Python</span>
+        </a>
+        <a class="mini reveal" style="--d:.25s" href="https://github.com/OmerBentzi/La-Pasta-Website.github.io" target="_blank" rel="noopener">
+          <span class="mini-name">LaPasta</span>
+          <span class="mini-desc">Italian-restaurant ordering platform — full-stack web side-quest.</span>
+          <span class="mini-tag">HTML · JS</span>
+        </a>
+      </div>
+
+      <p class="see-all">
+        <a class="link-arrow" href="https://github.com/OmerBentzi?tab=repositories" target="_blank" rel="noopener">
+          See all repositories on GitHub
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </p>
+    </section>
+
+    <!-- RESEARCH / NOW -->
+    <section class="section" id="research">
+      <header class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Research &amp; now<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <div class="now-grid">
+        <div class="now reveal">
+          <span class="now-tag">currently</span>
+          <h3>AI security research at Adversa</h3>
+          <p>Working on adversarial robustness, LLM red-teaming, and the security of agentic systems — the kind of work that lives at the awkward seam between research papers and production incidents.</p>
+        </div>
+        <div class="now reveal" style="--d:.08s">
+          <span class="now-tag">writing</span>
+          <h3>MCP attack surface, in public</h3>
+          <p>Documenting concrete failure modes in tool-using agents and the Model Context Protocol — repro labs, threat models, and the patches that shouldn't have been needed.</p>
+        </div>
+        <div class="now reveal" style="--d:.16s">
+          <span class="now-tag">studying</span>
+          <h3>Calibration in medical DL</h3>
+          <p>Topology-preserving classifiers and calibration metrics on real clinical 3D-ultrasound data, where being confidently wrong is genuinely dangerous.</p>
+        </div>
+        <div class="now reveal" style="--d:.24s">
+          <span class="now-tag">building</span>
+          <h3>Tools for code understanding</h3>
+          <p>RepoLLM and friends — turning real repositories into something an agent (or a tired engineer) can actually reason about.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-contact" id="contact">
+      <header class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Contact<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <div class="contact-wrap reveal">
+        <p class="contact-pre mono">// open to interesting research, collaborations &amp; talks</p>
+        <h3 class="contact-cta">
+          Have a hard problem at the
+          <span class="gradient">edge of AI &amp; security</span>?
+          Let's talk.
+        </h3>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary magnet" href="mailto:o.bensimon@adversa.ai">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>o.bensimon@adversa.ai</span>
+          </a>
+          <a class="btn btn-ghost magnet" href="https://www.linkedin.com/in/omer-ben-simon/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="btn btn-ghost magnet" href="https://github.com/OmerBentzi" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.99 5.24.99 11.51c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53v-1.86c-3.05.66-3.69-1.47-3.69-1.47-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.08-.66.08-.66 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.7-1.48-2.43-.28-4.99-1.21-4.99-5.39 0-1.19.43-2.16 1.13-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3.02 1.12.88-.24 1.81-.36 2.74-.37.93.01 1.86.13 2.74.37 2.1-1.41 3.02-1.12 3.02-1.12.6 1.5.22 2.61.11 2.89.7.76 1.13 1.73 1.13 2.92 0 4.19-2.56 5.1-5 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.2.64.76.53 4.36-1.45 7.49-5.56 7.49-10.41C23.01 5.24 18.27.5 12 .5z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="brand-mark sm">O</span>
+        <span>© <span id="year">2026</span> Omer Ben Simon</span>
+      </div>
+      <div class="footer-right mono">
+        <span>built with curiosity · hosted on github pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
