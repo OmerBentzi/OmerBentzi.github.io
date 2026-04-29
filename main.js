@@ -119,6 +119,17 @@
     });
   }
 
+  // ============== stack card spotlight ==============
+  if (mqHover && !reduce) {
+    document.querySelectorAll('.stack-cat').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
   // ============== 3D tilt cards ==============
   if (mqHover && !reduce) {
     document.querySelectorAll('.tilt').forEach(card => {
