@@ -237,16 +237,18 @@ These are non-negotiable for any new component:
 
 - **Text contrast:** `--text` (#e7ebf3) on `--bg-1` (#0a0e1a) passes AAA. `--text-2` on `--bg-1` passes AA. `--muted` on `--bg-1` passes AA for large text only — never use `--muted` for body copy under 16px.
 - **Cyan text on dark:** `--cyan` (#4cc6ff) on `--bg-1` is AA for normal text. Use it for accents and links, not paragraphs.
-- **Focus:** Default browser focus ring is currently inherited. If you remove an outline anywhere, you must replace it with a visible alternative (border color shift + box-shadow ring).
+- **Focus:** Global `:focus-visible` outline (2px solid `--cyan`, offset 3px). Default mouse `:focus` outline is removed. Modern browsers respect `border-radius` on outline, so pills get pill-shaped focus rings. Never remove a focus indicator without replacing it.
+- **Skip link:** A `.skip-link` exists at the top of `<body>` targeting `#top` (the `<main>` element, which has `tabindex="-1"`). Hidden off-screen until focused; slides in at top-left in cyan. Don't remove it. If you add a new top-level layout (e.g. a separate page), include the same skip link.
 - **Reduced motion:** Honored. Don't write a keyframe animation without verifying the reduce-motion override.
 - **Touch targets:** All interactive elements >= 44×44px. Current `.btn-mini` at 6×12 padding is borderline — verify hit area with `padding` not `font-size`.
 - **No info via color alone:** Status pills carry both a color AND a text label. Keep this pattern.
 - **No emoji as icons.** SVG only (Lucide / Heroicons / custom inline).
 
-### Known gaps (move to audit pass, not for here)
+### Known gaps
 
-- Custom cursor disables native cursor on `pointer:fine` devices, including keyboard users with a mouse. Verify focus rings remain unaffected.
-- Dashed underline on `.hero-sub .hl` (cyan dashed) — verify contrast at 1.4:1; may need bolder color.
+- Custom cursor disables native cursor on `pointer:fine` devices (set globally via `body { cursor: none }`). Focus rings remain visible (outline is independent of cursor), but users who disable the custom cursor via JS won't get a system cursor back without a page reload. Acceptable for now.
+- "Ghost cyan" `#00d4ff` (as `rgba(0,212,255,X)`) appears ~38 times in `styles.css` for shadow values. The token says `--cyan-2` should be `#00e0ff`. Not blocking — keep new code on the token; migrate the legacy raw rgbas opportunistically.
+- Favicon SVG uses `#00d4ff` / `#a855f7` (more saturated than tokens) — intentional for legibility at 16–32px browser-tab size. Don't "fix" it without verifying tab-icon visibility.
 
 ---
 
