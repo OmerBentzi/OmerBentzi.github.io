@@ -1,6 +1,6 @@
 # omerbentzi.github.io
 
-Personal portfolio of **Omer Ben Simon** — AI Security Research Engineer.
+Personal portfolio of **Omer Ben Simon** - AI Security Research Engineer.
 
 Live: <https://omerbentzi.github.io/>
 
@@ -23,8 +23,8 @@ python3 -m http.server 8080
 
 ## Editing
 
-- `index.html` — content (sections, copy, links)
-- `styles.css` — design system (colors, layout, animations)
-- `main.js` — interactions (canvas, reveal, tilt, cursor)
+- `index.html` - content (sections, copy, links)
+- `styles.css` - design system (colors, layout, animations)
+- `main.js` - interactions (canvas, reveal, tilt, cursor)
 
 The favicon and OG tags are inline in `index.html`.
