@@ -1,6 +1,6 @@
 # omerbentzi.github.io
 
-Personal portfolio of **Omer Ben Simon** - AI Security Research Engineer.
+Portfolio of **Omer Ben Simon** - AI Security Research Engineer.
 
 Live: <https://omerbentzi.github.io/>
 
