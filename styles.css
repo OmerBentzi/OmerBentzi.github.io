@@ -833,13 +833,23 @@ main {
   color: var(--text-1);
   white-space: nowrap;
 }
-.press-badge i {
-  font-style: normal;
+.press-badge::before {
+  content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--magenta);
   box-shadow: 0 0 8px var(--magenta);
+  flex-shrink: 0;
+}
+a.press-badge {
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s, transform 0.2s var(--ease-out);
+}
+a.press-badge:hover {
+  border-color: var(--border-bright);
+  color: var(--text-0);
+  transform: translateY(-2px);
 }
 
 .research-stage {
