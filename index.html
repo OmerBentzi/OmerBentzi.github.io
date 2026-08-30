@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0e1a" />
-  <title>Omer Ben Simon - AI Security Research Engineer @ Adversa AI</title>
-  <meta name="description" content="Portfolio of Omer Ben Simon - AI Security Research Engineer at Adversa AI. Adversarial ML, secure agentic architectures (MCP), applied red-teaming of LLMs, and end-to-end intelligent systems. M.Sc. in Intelligent Systems Engineering." />
+  <meta name="theme-color" content="#04060d" />
+  <title>Omer Ben Simon — AI Security Research Engineer @ Adversa AI</title>
+  <meta name="description" content="Portfolio of Omer Ben Simon — AI Security Research Engineer at Adversa AI. Adversarial ML, secure agentic architectures (MCP), applied red-teaming of LLMs, and OWASP Agentic Skills Top 10 contributor. Author of GuardFall and the open-source AI skill-scanner bypass research." />
   <meta name="author" content="Omer Ben Simon" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Omer Ben Simon - AI Security Research Engineer @ Adversa AI" />
-  <meta property="og:description" content="AI Security Research Engineer at Adversa AI. Adversarial ML, secure agentic architectures (MCP), red-teaming LLMs, and end-to-end intelligent systems." />
+  <meta property="og:title" content="Omer Ben Simon — AI Security Research Engineer @ Adversa AI" />
+  <meta property="og:description" content="Adversarial ML, secure agentic architectures (MCP), red-teaming LLMs. OWASP Agentic Skills Top 10 contributor. Author of GuardFall." />
   <meta property="og:url" content="https://omerbentzi.github.io/" />
+  <meta property="og:image" content="https://omerbentzi.github.io/omer.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://omerbentzi.github.io/omer.jpg" />
 
-  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2300d4ff'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%230a0e1a'/><text x='50%25' y='54%25' text-anchor='middle' font-family='ui-monospace,Menlo,monospace' font-size='34' font-weight='800' fill='url(%23g)' dominant-baseline='middle'>O</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2300e5ff'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%2304060d'/><text x='50%25' y='54%25' text-anchor='middle' font-family='ui-monospace,Menlo,monospace' font-size='34' font-weight='800' fill='url(%23g)' dominant-baseline='middle'>O</text></svg>" />
+  <link rel="apple-touch-icon" href="omer.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,10 +28,20 @@
 <body>
   <a class="skip-link" href="#top">Skip to main content</a>
 
+  <!-- preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-term">
+      <div class="loader-bar"><i></i></div>
+    </div>
+  </div>
+
   <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-fixed" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-aurora"></div>
+    <div class="bg-noise"></div>
+  </div>
 
   <div class="cursor" id="cursor" aria-hidden="true"><div class="cursor-dot"></div></div>
 
@@ -39,13 +52,13 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#about"><span class="num">01</span> about</a>
-      <a href="#experience"><span class="num">02</span> experience</a>
-      <a href="#work"><span class="num">03</span> work</a>
-      <a href="#stack"><span class="num">04</span> stack</a>
-      <a href="#background"><span class="num">05</span> background</a>
+      <a href="#research"><span class="num">02</span> research</a>
+      <a href="#experience"><span class="num">03</span> experience</a>
+      <a href="#work"><span class="num">04</span> work</a>
+      <a href="#stack"><span class="num">05</span> stack</a>
       <a href="#contact"><span class="num">06</span> contact</a>
     </nav>
-    <a class="btn btn-ghost nav-cta" href="#contact">
+    <a class="btn btn-ghost nav-cta magnet" href="#contact">
       <span>Get in touch</span>
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
@@ -55,12 +68,12 @@
   </header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="#about" data-close>01 - about</a>
-    <a href="#experience" data-close>02 - experience</a>
-    <a href="#work" data-close>03 - work</a>
-    <a href="#stack" data-close>04 - stack</a>
-    <a href="#background" data-close>05 - background</a>
-    <a href="#contact" data-close>06 - contact</a>
+    <a href="#about" data-close><span class="num">01</span>about</a>
+    <a href="#research" data-close><span class="num">02</span>research</a>
+    <a href="#experience" data-close><span class="num">03</span>experience</a>
+    <a href="#work" data-close><span class="num">04</span>work</a>
+    <a href="#stack" data-close><span class="num">05</span>stack</a>
+    <a href="#contact" data-close><span class="num">06</span>contact</a>
   </div>
 
   <main id="top" tabindex="-1">
@@ -69,30 +82,35 @@
       <canvas id="net" class="hero-canvas" aria-hidden="true"></canvas>
 
       <div class="hero-inner">
+        <div class="hero-avatar reveal">
+          <span class="hero-avatar-ring" aria-hidden="true"></span>
+          <img src="omer.jpg" alt="Portrait of Omer Ben Simon" width="150" height="150" loading="eager" />
+          <span class="hero-avatar-badge" aria-hidden="true"></span>
+        </div>
         <div class="hero-tag reveal">
           <span class="dot"></span>
-          <span class="mono">$ whoami - AI security research @ Adversa AI</span>
+          <span class="mono">$ whoami — AI security research @ Adversa AI</span>
         </div>
 
         <h1 class="hero-title">
-          <span class="line reveal" style="--d:.05s">Omer&nbsp;Ben&nbsp;Simon.</span>
-          <span class="line reveal gradient" style="--d:.15s">I build &amp; break</span>
-          <span class="line reveal" style="--d:.25s">intelligent systems.</span>
+          <span class="line">Omer Ben Simon.</span>
+          <span class="line gradient">I build &amp; break</span>
+          <span class="line">intelligent systems.</span>
         </h1>
 
-        <p class="hero-sub reveal" style="--d:.4s">
+        <p class="hero-sub reveal">
           <strong>AI Security Research Engineer at Adversa AI.</strong>
-          I work where research meets product -
+          I work where research meets product —
           <span class="hl">adversarial ML</span> &amp; threat research,
           <span class="hl">secure agentic architectures (MCP)</span>,
           <span class="hl">red-teaming LLMs</span>, and real-time
-          defense infrastructure. AI/ML Engineer · Data Scientist ·
-          M.Sc. in Intelligent Systems Engineering.
+          defense infrastructure. Author of <span class="hl">GuardFall</span> ·
+          OWASP Agentic Skills Top 10 contributor.
         </p>
 
-        <div class="hero-cta reveal" style="--d:.55s">
-          <a class="btn btn-primary magnet" href="#work">
-            <span>See selected work</span>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary magnet" href="#research">
+            <span>See latest research</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
           <a class="btn btn-ghost magnet" href="#contact">
@@ -100,7 +118,7 @@
           </a>
         </div>
 
-        <div class="hero-meta reveal" style="--d:.7s">
+        <div class="hero-meta reveal">
           <a href="https://github.com/OmerBentzi" target="_blank" rel="noopener" class="meta-link">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.99 5.24.99 11.51c0 4.85 3.14 8.96 7.5 10.41.55.1.75-.24.75-.53v-1.86c-3.05.66-3.69-1.47-3.69-1.47-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.08-.66.08-.66 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.7-1.48-2.43-.28-4.99-1.21-4.99-5.39 0-1.19.43-2.16 1.13-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3.02 1.12.88-.24 1.81-.36 2.74-.37.93.01 1.86.13 2.74.37 2.1-1.41 3.02-1.12 3.02-1.12.6 1.5.22 2.61.11 2.89.7.76 1.13 1.73 1.13 2.92 0 4.19-2.56 5.1-5 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.2.64.76.53 4.36-1.45 7.49-5.56 7.49-10.41C23.01 5.24 18.27.5 12 .5z"/></svg>
             <span>github.com/OmerBentzi</span>
@@ -117,13 +135,21 @@
       </div>
 
       <div class="scroll-indicator" aria-hidden="true">
-        <span class="mono">scroll</span>
+        <span>scroll</span>
         <span class="line-down"></span>
       </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" data-speed="0.5" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Adversarial ML <i>◆</i> MCP Security <i>◆</i> LLM Red-Teaming <i>◆</i> Prompt Injection <i>◆</i> Agentic AI <i>◆</i> Shell Injection <i>◆</i> Guardrail Bypass <i>◆</i> Threat Research <i>◆</i> </span>
+      </div>
+    </div>
+
     <!-- ABOUT -->
     <section class="section" id="about">
+      <span class="ghost-num" aria-hidden="true">01</span>
       <header class="section-head">
         <span class="section-num">01</span>
         <h2 class="section-title">About<span class="accent">.</span></h2>
@@ -137,7 +163,7 @@
             working at the intersection of adversarial ML, agentic AI security,
             and applied red-teaming. Day-to-day I turn lab-scale research and
             exploit discoveries into <em>production-grade security features</em>
-            for enterprise AI systems - and design the countermeasures that hold up
+            for enterprise AI systems — and design the countermeasures that hold up
             once the model meets real adversaries.
           </p>
           <p class="reveal" style="--d:.1s">
@@ -150,84 +176,261 @@
             behavioral flaws.
           </p>
           <p class="reveal" style="--d:.18s">
-            Before Adversa I co-founded <strong>WizeAssist</strong> and led a team
-            of 7 shipping real-time pose-estimation and RAG-based LLM systems to
-            production. I also research and defend at <strong>IAI Missiles &amp;
-            Space Division</strong>. Currently completing my
-            <strong>M.Sc. in Intelligent Systems Engineering</strong> at Afeka, after a
-            B.Sc. in Computer Science (AI/ML). Former combat first sergeant in
-            <em>Sayeret Nahal</em>.
+            I led <strong>GuardFall</strong>, a structural study showing that
+            30-year-old shell tricks defeat the safety guardrails of open-source
+            AI coding agents — covered exclusively by The Hacker News, SecurityWeek
+            and Security Affairs. I also contribute to the
+            <strong>OWASP Agentic Skills Top 10</strong>. Before Adversa I co-founded
+            <strong>WizeAssist</strong> and led a team of 7, and I researched and
+            defended at <strong>IAI Missiles &amp; Space Division</strong>. Completing
+            my <strong>M.Sc. in Intelligent Systems Engineering</strong> at Afeka.
+            Former combat first sergeant in <em>Sayeret Nahal</em>.
           </p>
 
           <div class="terminal reveal" style="--d:.26s">
             <div class="terminal-bar">
               <span></span><span></span><span></span>
-              <span class="terminal-title">~ /omer - zsh</span>
+              <span class="terminal-title">~ /omer — zsh</span>
             </div>
-            <pre class="terminal-body"><span class="t-prompt">omer@portfolio</span> <span class="t-arrow">~</span> <span class="t-cmd">whoami --json</span>
+            <pre class="terminal-body"><span class="t-prompt">omer@adversa</span> <span class="t-arrow">~</span> <span class="t-cmd">whoami --json</span>
 <span class="t-out">{
-  "name":      "Omer Ben Simon",
-  "role":      "AI Security Research Engineer @ Adversa AI",
-  "focus":     ["adversarial ML", "MCP / agentic security", "LLM red-team", "platform hardening"],
-  "edu":       "M.Sc. Intelligent Systems Engineering · B.Sc. CS (AI/ML)",
-  "shipped":   "WizeAssist · 10M+ pose frames · 98% pipeline reliability",
-  "research":  "Rectal-cancer EUS classification @ Sheba (91% sens, 88% spec)",
-  "stack":     ["Python", "PyTorch", "TensorFlow", "FastAPI", "Kafka", "Spark"],
-  "languages": ["Hebrew (native)", "English (proficient)"],
-  "open_to":   ["research collabs", "hard problems at the AI/security edge"]
+  <span class="t-key">"name"</span>:      <span class="t-str">"Omer Ben Simon"</span>,
+  <span class="t-key">"role"</span>:      <span class="t-str">"AI Security Research Engineer @ Adversa AI"</span>,
+  <span class="t-key">"focus"</span>:     [<span class="t-str">"adversarial ML"</span>, <span class="t-str">"MCP / agentic security"</span>, <span class="t-str">"LLM red-team"</span>],
+  <span class="t-key">"flagship"</span>:  <span class="t-str">"GuardFall — shell injection in 10/11 AI coding agents"</span>,
+  <span class="t-key">"owasp"</span>:     <span class="t-str">"Contributor · Agentic Skills Top 10"</span>,
+  <span class="t-key">"press"</span>:     [<span class="t-str">"The Hacker News"</span>, <span class="t-str">"SecurityWeek"</span>, <span class="t-str">"Security Affairs"</span>],
+  <span class="t-key">"edu"</span>:       <span class="t-str">"M.Sc. Intelligent Systems Eng · B.Sc. CS (AI/ML)"</span>,
+  <span class="t-key">"open_to"</span>:   [<span class="t-str">"research collabs"</span>, <span class="t-str">"hard problems at the AI/security edge"</span>]
 }</span></pre>
           </div>
         </div>
 
         <aside class="about-stats">
           <div class="stat reveal" style="--d:.05s">
-            <div class="stat-num">10M<span class="muted">+</span></div>
-            <div class="stat-label">motion frames processed</div>
+            <div class="stat-num"><span class="count" data-target="4">0</span> <span class="muted">pubs</span></div>
+            <div class="stat-label">Adversa AI research write-ups, 2026</div>
           </div>
           <div class="stat reveal" style="--d:.15s">
-            <div class="stat-num">91<span class="muted">%</span></div>
-            <div class="stat-label">EUS sensitivity, Sheba study</div>
+            <div class="stat-num"><span class="count" data-target="10">0</span><span class="muted">/11</span></div>
+            <div class="stat-label">AI coding agents broken by GuardFall</div>
           </div>
           <div class="stat reveal" style="--d:.25s">
-            <div class="stat-num">10+</div>
-            <div class="stat-label">engineers led</div>
+            <div class="stat-num"><span class="count" data-target="8">0</span></div>
+            <div class="stat-label">skill scanners bypassed, all of them</div>
           </div>
           <div class="stat reveal" style="--d:.35s">
-            <div class="stat-num">10K<span class="muted">+</span></div>
-            <div class="stat-label">endpoints monitored @ IAI</div>
+            <div class="stat-num"><span class="count" data-target="10">0</span><span class="muted">/10</span></div>
+            <div class="stat-label">CTF flags captured by AI red-team agent</div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section class="section" id="experience">
+    <!-- RESEARCH (flagship) -->
+    <section class="section research-outer" id="research">
+      <span class="ghost-num" aria-hidden="true">02</span>
       <header class="section-head">
         <span class="section-num">02</span>
+        <h2 class="section-title">Latest research<span class="accent">.</span></h2>
+        <span class="section-rule"></span>
+      </header>
+
+      <p class="research-intro reveal">
+        My 2026 work at Adversa AI on the security of agentic AI — from a universal
+        shell-injection flaw in open-source coding agents, to breaking every published
+        AI skill scanner, to an autonomous red-team agent that clears real-world CTFs.
+        <span class="press-row">
+          <span class="press-badge" data-scramble><i></i>The Hacker News</span>
+          <span class="press-badge" data-scramble><i></i>SecurityWeek</span>
+          <span class="press-badge" data-scramble><i></i>Security Affairs</span>
+        </span>
+      </p>
+
+      <div class="research-stage">
+        <div class="research-track">
+
+          <!-- GuardFall — flagship -->
+          <article class="r-card flagship">
+            <div class="r-top">
+              <span class="r-index">// 01 · flagship</span>
+              <span class="r-flag-pill">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+                Global press coverage
+              </span>
+            </div>
+            <h3 class="r-title">GuardFall — a universal shell-injection flaw in open-source AI agents</h3>
+            <p class="r-desc">
+              A structural study of the agent-to-bash boundary in 11 popular open-source
+              AI coding agents (~548K combined GitHub stars). Guards regex-match the raw
+              command while bash rewrites it before execution — five bypass classes push
+              destructive commands straight through. 30-year-old shell tricks defeat modern
+              safety guardrails; <strong>10 of 11 agents</strong> left fully exploitable.
+            </p>
+            <div class="r-stats">
+              <div class="r-stat"><b>10/11</b><span>agents exploitable</span></div>
+              <div class="r-stat"><b>~548K</b><span>combined GH stars</span></div>
+              <div class="r-stat"><b>5</b><span>bypass classes</span></div>
+            </div>
+            <div class="r-press">
+              <span class="press-badge"><i></i>The Hacker News</span>
+              <span class="press-badge"><i></i>SecurityWeek</span>
+              <span class="press-badge"><i></i>Security Affairs</span>
+            </div>
+            <div class="r-bottom">
+              <ul class="r-tags">
+                <li>shell injection</li><li>guardrail bypass</li><li>AI coding agents</li>
+              </ul>
+              <a class="r-link" href="https://adversa.ai/blog/opensource-ai-coding-agents-shell-injection-vulnerability/" target="_blank" rel="noopener">
+                Read
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Skill scanners -->
+          <article class="r-card">
+            <div class="r-top">
+              <span class="r-index">// 02 · benchmark</span>
+              <span class="r-date">Jul 30, 2026</span>
+            </div>
+            <h3 class="r-title">A hole in every one: bypassing the open-source AI skill scanners</h3>
+            <p class="r-desc">
+              Eight open-source agent-skill scanners run against real attacks with a
+              live, control-armed evasion harness — a single malicious skill slipped
+              past <strong>all eight</strong>, including the current leaderboard leader.
+              Shared root cause: every scanner matches the bytes in the file, not the
+              bytes that execute. Ten bypass classes; noise so high none beats a
+              flag-everything baseline.
+            </p>
+            <div class="r-stats">
+              <div class="r-stat"><b>8/8</b><span>scanners bypassed</span></div>
+              <div class="r-stat"><b>10</b><span>bypass classes</span></div>
+              <div class="r-stat"><b>178/191</b><span>adaptive attacks through</span></div>
+            </div>
+            <div class="r-bottom">
+              <ul class="r-tags">
+                <li>skill security</li><li>evasion</li><li>benchmarking</li>
+              </ul>
+              <a class="r-link" href="https://adversa.ai/blog/agent-skill-scanners-bypass-eight-tested/" target="_blank" rel="noopener">
+                Read
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- GitHub Secure Code Game -->
+          <article class="r-card">
+            <div class="r-top">
+              <span class="r-index">// 03 · red team</span>
+              <span class="r-date">Jul 17, 2026</span>
+            </div>
+            <h3 class="r-title">Solving GitHub's Secure Code game with an AI red-teaming agent</h3>
+            <p class="r-desc">
+              Adversa's autonomous red-team agent cleared all five levels of ProdBot —
+              the agentic-AI season of GitHub's Secure Code Game (used by 10,000
+              developers) — capturing every flag. Exploits spanned sandbox escape,
+              an over-permissioned MCP tool, memory-policy poisoning through an
+              approved skill, and a confused-deputy attack across a six-sub-agent chain.
+              Not one winning input used jailbreak vocabulary.
+            </p>
+            <div class="r-stats">
+              <div class="r-stat"><b>5/5</b><span>levels cleared</span></div>
+              <div class="r-stat"><b>10,000</b><span>devs on the game</span></div>
+              <div class="r-stat"><b>6</b><span>sub-agent chain</span></div>
+            </div>
+            <div class="r-bottom">
+              <ul class="r-tags">
+                <li>agentic security</li><li>MCP</li><li>confused deputy</li>
+              </ul>
+              <a class="r-link" href="https://adversa.ai/blog/github-prodbot-ctf-ai-red-teaming-agent/" target="_blank" rel="noopener">
+                Read
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- DEF CON CTF -->
+          <article class="r-card">
+            <div class="r-top">
+              <span class="r-index">// 04 · red team</span>
+              <span class="r-date">Jun 23, 2026</span>
+            </div>
+            <h3 class="r-title">Solving the "Breaking the Prompt" DEF CON AI CTF</h3>
+            <p class="r-desc">
+              An autonomous AI red-teaming agent talked its way past all five guard
+              personas of a DEF CON prompt-injection CTF (Firewall, Gatekeeper, Cipher,
+              Bunker, Sentinel) — full score, no human between stages, and not a single
+              classic jailbreak phrase. The winning attacks borrowed each target's own
+              operational frame instead of universal jailbreak techniques.
+            </p>
+            <div class="r-stats">
+              <div class="r-stat"><b>5/5</b><span>stages cleared</span></div>
+              <div class="r-stat"><b>500</b><span>XP · full score</span></div>
+              <div class="r-stat"><b>0</b><span>jailbreak phrases</span></div>
+            </div>
+            <div class="r-bottom">
+              <ul class="r-tags">
+                <li>prompt injection</li><li>guardrails</li><li>DEF CON</li>
+              </ul>
+              <a class="r-link" href="https://adversa.ai/blog/solving-defcon-ai-ctf-with-ai-red-teaming-agent/" target="_blank" rel="noopener">
+                Read
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <p class="research-hint" aria-hidden="true"><span class="h-line"></span> drag / scroll to explore</p>
+      </div>
+
+      <!-- OWASP contributor banner -->
+      <div class="owasp-banner reveal">
+        <div class="owasp-icon">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="owasp-copy">
+          <span class="owasp-kicker">Standards &amp; community</span>
+          <h3 class="owasp-title">Contributor — OWASP Agentic Skills Top 10</h3>
+          <p class="owasp-desc">
+            Contributing to the global security standard and core baseline for AI agent
+            security and threat classification, with the OWASP® Foundation.
+          </p>
+        </div>
+        <span class="owasp-date">Jul 2026 — Present</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="section" id="experience">
+      <span class="ghost-num" aria-hidden="true">03</span>
+      <header class="section-head">
+        <span class="section-num">03</span>
         <h2 class="section-title">Experience<span class="accent">.</span></h2>
         <span class="section-rule"></span>
       </header>
 
       <div class="timeline">
+        <span class="timeline-draw" aria-hidden="true"></span>
 
         <article class="tl-item reveal">
           <div class="tl-rail"><span class="tl-dot"></span></div>
           <div class="tl-content">
             <div class="tl-head">
-              <span class="tl-date mono">Apr 2026 - Present</span>
+              <span class="tl-date mono">Apr 2026 — Present</span>
               <span class="tl-pill">current</span>
             </div>
             <h3>AI Security Research Engineer</h3>
             <p class="tl-org">Adversa AI</p>
             <ul class="tl-bullets">
-              <li><strong>Innovation &amp; Prototyping -</strong> turn theoretical research and exploit discoveries into <strong>production-grade security features</strong>, leveraging AI-assisted development to bridge lab-scale proofs and enterprise-ready tools.</li>
-              <li><strong>Adversarial ML &amp; Threat Research -</strong> investigate model vulnerabilities (<em>evasion, data poisoning, model inversion</em>) and design <strong>mathematically-grounded countermeasures</strong> for model robustness.</li>
-              <li><strong>Secure Agentic Architectures -</strong> architect autonomous agent frameworks centered on the <strong>Model Context Protocol (MCP)</strong> and secure tool-use; research novel mitigations for <em>prompt injection</em> and <em>logic-based privilege escalation</em>.</li>
-              <li><strong>Applied AI Red Teaming -</strong> run advanced security assessments and stress-test LLMs and generative pipelines to surface emergent risks and <em>"zero-day" behavioral flaws</em>.</li>
-              <li><strong>Platform Hardening -</strong> build core, real-time defense infrastructure informed by continuous monitoring of the evolving AI threat landscape.</li>
+              <li><strong>Innovation &amp; Prototyping —</strong> turn theoretical research and exploit discoveries into <strong>production-grade security features</strong>, leveraging AI-assisted development to bridge lab-scale proofs and enterprise-ready tools.</li>
+              <li><strong>Flagship research —</strong> led <strong>GuardFall</strong>, showing 30-year-old shell tricks defeat guardrails in 10/11 open-source AI coding agents; broke all 8 open-source AI skill scanners; built an autonomous red-team agent that cleared GitHub's and DEF CON's AI CTFs.</li>
+              <li><strong>Adversarial ML &amp; Threat Research —</strong> investigate model vulnerabilities (<em>evasion, data poisoning, model inversion</em>) and design <strong>mathematically-grounded countermeasures</strong> for model robustness.</li>
+              <li><strong>Secure Agentic Architectures —</strong> architect autonomous agent frameworks centered on the <strong>Model Context Protocol (MCP)</strong> and secure tool-use; research novel mitigations for <em>prompt injection</em> and <em>logic-based privilege escalation</em>.</li>
+              <li><strong>Applied AI Red Teaming —</strong> run advanced security assessments and stress-test LLMs and generative pipelines to surface emergent risks and <em>"zero-day" behavioral flaws</em>.</li>
             </ul>
             <ul class="chips">
-              <li>Adversarial ML</li><li>MCP</li><li>LLM Red-team</li><li>Prompt Injection</li><li>Agent Security</li><li>Threat Research</li><li>Defense Infra</li><li>Python</li><li>PyTorch</li>
+              <li>Adversarial ML</li><li>MCP</li><li>LLM Red-team</li><li>Prompt Injection</li><li>Agent Security</li><li>Shell Injection</li><li>Threat Research</li><li>Python</li><li>PyTorch</li>
             </ul>
           </div>
         </article>
@@ -236,19 +439,17 @@
           <div class="tl-rail"><span class="tl-dot"></span></div>
           <div class="tl-content">
             <div class="tl-head">
-              <span class="tl-date mono">Apr 2023 - Apr 2026</span>
+              <span class="tl-date mono">Jul 2026 — Present</span>
+              <span class="tl-pill std">community</span>
             </div>
-            <h3>Cyber Security Analyst &amp; Researcher</h3>
-            <p class="tl-org">Israel Aerospace Industries · Missiles &amp; Space Division</p>
+            <h3>Contributor — Agentic Skills Top 10</h3>
+            <p class="tl-org">OWASP® Foundation</p>
             <ul class="tl-bullets">
-              <li>Led cybersecurity monitoring &amp; incident response across <strong>10,000+ endpoints</strong> with QRadar and threat-intelligence platforms - cut average response time by <strong>40%</strong>.</li>
-              <li>Operated under highest-level security clearance under strict national-defense protocols.</li>
-              <li>Reinforced infosec posture via system hardening, patching, and proactive vulnerability management.</li>
-              <li>Researched emerging threats and contributed to <strong>AI-driven detection models</strong>.</li>
-              <li>Ran advanced investigations: malware analysis, lateral-movement detection, and APT behavior profiling.</li>
+              <li>Contributing to the <strong>global security standard and core baseline</strong> for AI agent security and threat classification.</li>
+              <li>Helping shape how the industry categorizes and defends against emerging agentic-AI attack surfaces.</li>
             </ul>
             <ul class="chips">
-              <li>QRadar</li><li>Splunk</li><li>ELK</li><li>CrowdStrike</li><li>SIEM/SOAR</li><li>EDR/XDR</li><li>Threat Intel</li><li>Python</li><li>Bash</li><li>Active Directory</li><li>Palo Alto NGFW</li>
+              <li>OWASP</li><li>Agentic AI</li><li>Threat Classification</li><li>Security Standards</li>
             </ul>
           </div>
         </article>
@@ -257,7 +458,28 @@
           <div class="tl-rail"><span class="tl-dot"></span></div>
           <div class="tl-content">
             <div class="tl-head">
-              <span class="tl-date mono">Mar 2024 - Aug 2025</span>
+              <span class="tl-date mono">Apr 2023 — Apr 2026</span>
+            </div>
+            <h3>Cyber Security Analyst &amp; Researcher</h3>
+            <p class="tl-org">Israel Aerospace Industries · Missiles &amp; Space Division</p>
+            <ul class="tl-bullets">
+              <li>Led cybersecurity monitoring &amp; incident response across <strong>10,000+ endpoints</strong> with QRadar and threat-intelligence platforms — cut average response time by <strong>40%</strong>.</li>
+              <li>Operated under highest-level security clearance under strict national-defense protocols.</li>
+              <li>Reinforced infosec posture via system hardening, patching, and proactive vulnerability management.</li>
+              <li>Researched emerging threats and contributed to <strong>AI-driven detection models</strong>.</li>
+              <li>Ran advanced investigations: malware analysis, lateral-movement detection, and APT behavior profiling.</li>
+            </ul>
+            <ul class="chips">
+              <li>QRadar</li><li>Splunk</li><li>ELK</li><li>CrowdStrike</li><li>SIEM/SOAR</li><li>EDR/XDR</li><li>Threat Intel</li><li>Python</li><li>Active Directory</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" style="--d:.18s">
+          <div class="tl-rail"><span class="tl-dot"></span></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <span class="tl-date mono">Mar 2024 — Aug 2025</span>
               <span class="tl-pill alt">co-founder</span>
             </div>
             <h3>Lead AI/ML Engineer &amp; Co-Founder</h3>
@@ -265,13 +487,12 @@
             <ul class="tl-bullets">
               <li>Designed scalable <strong>ETL pipelines for real-time pose-estimation data</strong>, converting <strong>10M+ motion frames</strong> into structured time-series datasets at <strong>98% processing reliability</strong>.</li>
               <li>Built &amp; deployed ML models (classification, segmentation, anomaly detection) for <strong>injury prediction</strong>.</li>
-              <li>Integrated NLP and <strong>RAG-based LLMs (GPT-4, Claude)</strong> to generate personalized insights from biomechanical history - cut summary prep time by <strong>80%</strong> and lifted engagement by <strong>35%</strong>.</li>
+              <li>Integrated NLP and <strong>RAG-based LLMs (GPT-4, Claude)</strong> to generate personalized insights from biomechanical history — cut summary prep time by <strong>80%</strong> and lifted engagement by <strong>35%</strong>.</li>
               <li>Led a team of <strong>7 data scientists &amp; engineers</strong> through production deployment and pipeline optimization.</li>
               <li>Fine-tuned LLMs with <strong>SFT, DPO, RLHF</strong>, improving internal response-quality metrics by <strong>25%</strong>.</li>
-              <li>Collaborated with professional sports teams and physiotherapists to ground the product in real biomechanical data.</li>
             </ul>
             <ul class="chips">
-              <li>PyTorch</li><li>TensorFlow</li><li>OpenCV</li><li>MediaPipe</li><li>GPT-4</li><li>Claude</li><li>RAG</li><li>LangChain</li><li>Pinecone</li><li>ChromaDB</li><li>FastAPI</li><li>Kafka</li><li>Spark</li><li>ONNX / TensorRT</li><li>MLflow</li><li>GCP</li>
+              <li>PyTorch</li><li>TensorFlow</li><li>OpenCV</li><li>MediaPipe</li><li>GPT-4</li><li>Claude</li><li>RAG</li><li>LangChain</li><li>FastAPI</li><li>Kafka</li><li>Spark</li><li>GCP</li>
             </ul>
           </div>
         </article>
@@ -281,8 +502,9 @@
 
     <!-- WORK / PROJECTS -->
     <section class="section" id="work">
+      <span class="ghost-num" aria-hidden="true">04</span>
       <header class="section-head">
-        <span class="section-num">03</span>
+        <span class="section-num">04</span>
         <h2 class="section-title">Selected work<span class="accent">.</span></h2>
         <span class="section-rule"></span>
       </header>
@@ -291,7 +513,7 @@
 
         <article class="project reveal">
           <div class="project-meta">
-            <span class="mono small">// flagship research · sheba medical center</span>
+            <span class="mono small" data-scramble>// flagship research · sheba medical center</span>
             <h3>Rectal-Cancer Classification on Endoscopic Ultrasound</h3>
             <p>
               An applied research project in collaboration with
@@ -303,31 +525,31 @@
             </p>
             <p>
               I independently proposed using <strong>Knowledge Distillation</strong> to
-              compress Vision Transformers into lightweight CNNs - <strong>4× smaller</strong>
+              compress Vision Transformers into lightweight CNNs — <strong>4× smaller</strong>
               while preserving diagnostic performance. Added <strong>Attention Map
               Supervision</strong> on early conv layers for a <strong>+6% AUC</strong> bump
-              on complex tumor cases. The model is the basis for a next-generation
-              clinical decision-support tool.
+              on complex tumor cases.
             </p>
             <ul class="chips">
-              <li>PyTorch</li><li>TensorFlow</li><li>Vision Transformer</li><li>Knowledge Distillation</li><li>Attention Maps</li><li>CLAHE</li><li>Medical Imaging</li>
+              <li>PyTorch</li><li>Vision Transformer</li><li>Knowledge Distillation</li><li>Attention Maps</li><li>CLAHE</li><li>Medical Imaging</li>
             </ul>
             <div class="project-meta-row mono">
-              <span>91% sensitivity · 88% specificity · 4× model compression · +6% AUC</span>
+              <span>91% sensitivity · 88% specificity · 4× compression · +6% AUC</span>
             </div>
           </div>
-          <div class="project-art project-art-eus" aria-hidden="true">
-            <div class="art-grid"></div>
+          <div class="project-art" aria-hidden="true">
+            <div class="art-grid-bg"></div>
+            <div class="art-blob b1"></div>
+            <div class="art-blob b2"></div>
             <div class="art-pulse"></div>
-            <div class="art-shape s1"></div>
-            <div class="art-shape s2"></div>
+            <div class="art-pulse delay"></div>
             <span class="art-label mono">[ ViT → CNN · KD · attention-map supervision ]</span>
           </div>
         </article>
 
         <article class="project reveal flip">
           <div class="project-meta">
-            <span class="mono small">// flagship product · wizeassist</span>
+            <span class="mono small" data-scramble>// flagship product · wizeassist</span>
             <h3>Real-Time Pose-Estimation Platform with RAG-Based LLM Insights</h3>
             <p>
               The full AI stack behind WizeAssist's product. Streaming ETL pipelines that
@@ -341,21 +563,21 @@
               Result: <strong>80%</strong> reduction in summary preparation time,
               <strong>35%</strong> engagement boost, and a <strong>25%</strong> improvement
               in response-quality metrics after LLM fine-tuning (SFT / DPO / RLHF).
-              Led a team of <strong>7</strong> through production deployment.
             </p>
             <ul class="chips">
-              <li>PyTorch</li><li>MediaPipe</li><li>YOLOv8</li><li>RAG</li><li>LangChain</li><li>GPT-4</li><li>Claude</li><li>FastAPI</li><li>Kafka</li><li>Spark</li><li>ONNX Runtime</li><li>MLflow</li><li>GCP</li>
+              <li>PyTorch</li><li>MediaPipe</li><li>YOLOv8</li><li>RAG</li><li>LangChain</li><li>GPT-4</li><li>Claude</li><li>FastAPI</li><li>Kafka</li><li>Spark</li><li>MLflow</li>
             </ul>
             <div class="project-meta-row mono">
               <span>10M+ frames · 98% reliability · 80% time saved · 35% engagement</span>
             </div>
           </div>
-          <div class="project-art project-art-pose" aria-hidden="true">
+          <div class="project-art" aria-hidden="true">
+            <div class="art-grid-bg"></div>
             <div class="art-skeleton">
-              <span class="bone b1"></span><span class="bone b2"></span><span class="bone b3"></span>
-              <span class="bone b4"></span><span class="bone b5"></span><span class="bone b6"></span>
-              <span class="joint j1"></span><span class="joint j2"></span><span class="joint j3"></span>
-              <span class="joint j4"></span><span class="joint j5"></span><span class="joint j6"></span>
+              <span class="bone b1s"></span><span class="bone b2s"></span><span class="bone b3s"></span>
+              <span class="bone b4s"></span><span class="bone b5s"></span><span class="bone b6s"></span>
+              <span class="joint j1s"></span><span class="joint j2s"></span><span class="joint j3s"></span>
+              <span class="joint j4s"></span><span class="joint j5s"></span><span class="joint j6s"></span>
             </div>
             <span class="art-label mono">[ pose · streaming · RAG · production ]</span>
           </div>
@@ -363,11 +585,11 @@
 
         <article class="project reveal">
           <div class="project-meta">
-            <span class="mono small">// security research · 2025</span>
+            <span class="mono small" data-scramble>// security research · 2025</span>
             <h3>MCP Vulnerability Lab</h3>
             <p>
               A research playground for the <strong>Model Context Protocol</strong> attack
-              surface - tool-poisoning, capability confusion, server-side prompt injection,
+              surface — tool-poisoning, capability confusion, server-side prompt injection,
               and the cracks between agent and host. Built to make agent-stack failure
               modes reproducible instead of anecdotal.
             </p>
@@ -375,13 +597,14 @@
               <li>MCP</li><li>LLM agents</li><li>Python</li><li>Red team</li><li>Agent security</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/OmerBentzi/mcp-vulnerability-lab" target="_blank" rel="noopener" class="btn btn-mini">
+              <a href="https://github.com/OmerBentzi/mcp-vulnerability-lab" target="_blank" rel="noopener" class="btn btn-mini magnet">
                 <span>Source on GitHub</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
               </a>
             </div>
           </div>
-          <div class="project-art project-art-mcp" aria-hidden="true">
+          <div class="project-art" aria-hidden="true">
+            <div class="art-grid-bg"></div>
             <div class="art-orbit"><span></span><span></span><span></span></div>
             <span class="art-label mono">[ MCP · agent-tooling · sandbox-escape ]</span>
           </div>
@@ -389,54 +612,55 @@
 
         <article class="project reveal flip">
           <div class="project-meta">
-            <span class="mono small">// research · medical imaging · 2026</span>
+            <span class="mono small" data-scramble>// research · medical imaging · 2026</span>
             <h3>Topology-Preserving DL for OASI Classification</h3>
             <p>
               EAS-vs-IAS subtype classification on operator-selected 2D frames from 3D
               transperineal ultrasound. <strong>EfficientNet-B3 + CLAHE + focal loss</strong>;
               patient-level splits, calibration analysis, multi-seed ablations, and
-              statistical tests done right - research code that stands up to scrutiny.
+              statistical tests done right — research code that stands up to scrutiny.
             </p>
             <ul class="chips">
               <li>PyTorch</li><li>EfficientNet</li><li>Medical Imaging</li><li>Focal Loss</li><li>Calibration</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/OmerBentzi/topology-preserving-oasi-classification" target="_blank" rel="noopener" class="btn btn-mini">
+              <a href="https://github.com/OmerBentzi/topology-preserving-oasi-classification" target="_blank" rel="noopener" class="btn btn-mini magnet">
                 <span>Source on GitHub</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
               </a>
             </div>
           </div>
-          <div class="project-art project-art-oasi" aria-hidden="true">
-            <div class="art-grid"></div>
-            <div class="art-shape s1"></div>
-            <div class="art-shape s2"></div>
+          <div class="project-art" aria-hidden="true">
+            <div class="art-grid-bg"></div>
+            <div class="art-blob b1"></div>
+            <div class="art-blob b2"></div>
             <span class="art-label mono">[ EfficientNet-B3 · focal-loss · CLAHE ]</span>
           </div>
         </article>
 
         <article class="project reveal">
           <div class="project-meta">
-            <span class="mono small">// tooling · 2025</span>
+            <span class="mono small" data-scramble>// tooling · 2025</span>
             <h3>RepoLLM</h3>
             <p>
               Talk to a repository like a senior engineer who just walked in. A
               TypeScript-first system that turns a git tree into a queryable
-              knowledge surface for code understanding - retrieval, embeddings,
+              knowledge surface for code understanding — retrieval, embeddings,
               and an interface tuned for actually answering "where does this happen?".
             </p>
             <ul class="chips">
               <li>TypeScript</li><li>LLM</li><li>Retrieval</li><li>Embeddings</li><li>Code intel</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/OmerBentzi/RepoLLM" target="_blank" rel="noopener" class="btn btn-mini">
+              <a href="https://github.com/OmerBentzi/RepoLLM" target="_blank" rel="noopener" class="btn btn-mini magnet">
                 <span>Source on GitHub</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
               </a>
             </div>
           </div>
-          <div class="project-art project-art-repo" aria-hidden="true">
-            <div class="art-tree"></div>
+          <div class="project-art" aria-hidden="true">
+            <div class="art-grid-bg"></div>
+            <div class="art-orbit"><span></span><span></span><span></span></div>
             <span class="art-label mono">[ git-tree · embeddings · TS ]</span>
           </div>
         </article>
@@ -453,8 +677,9 @@
 
     <!-- STACK -->
     <section class="section" id="stack">
+      <span class="ghost-num" aria-hidden="true">05</span>
       <header class="section-head">
-        <span class="section-num">04</span>
+        <span class="section-num">05</span>
         <h2 class="section-title">Stack<span class="accent">.</span></h2>
         <span class="section-rule"></span>
       </header>
@@ -466,7 +691,7 @@
           </div>
           <h3>Languages</h3>
           <ul class="chips">
-            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>C++</li><li>C#</li><li>R</li><li>HTML</li><li>CSS</li>
+            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>C++</li><li>C#</li><li>R</li><li>Bash</li>
           </ul>
         </article>
 
@@ -474,9 +699,9 @@
           <div class="stack-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
           </div>
-          <h3>Machine Learning</h3>
+          <h3>AI Security &amp; Red-Team</h3>
           <ul class="chips">
-            <li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li>
+            <li>Adversarial ML</li><li>LLM Red-teaming</li><li>Prompt Injection</li><li>Shell Injection</li><li>Guardrail Bypass</li><li>Evasion &amp; Poisoning</li>
           </ul>
         </article>
 
@@ -484,39 +709,39 @@
           <div class="stack-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
           </div>
-          <h3>Deep Learning</h3>
+          <h3>Agentic AI</h3>
           <ul class="chips">
-            <li>Transformers</li><li>Attention</li><li>CNNs</li><li>RNN / LSTM / GRU</li><li>Self-Supervised Learning</li><li>Knowledge Distillation</li>
+            <li>MCP</li><li>AI Agents</li><li>Secure Tool-Use</li><li>Multi-Agent Systems</li><li>Agent Skills</li><li>OWASP Agentic Top 10</li>
           </ul>
         </article>
 
         <article class="stack-cat reveal" style="--d:.15s">
           <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/></svg>
           </div>
-          <h3>Computer Vision</h3>
+          <h3>Deep Learning</h3>
           <ul class="chips">
-            <li>OpenCV</li><li>MediaPipe</li><li>YOLOv8</li><li>Pose Estimation</li><li>Object Detection</li><li>Segmentation</li>
+            <li>PyTorch</li><li>TensorFlow</li><li>Transformers</li><li>CNNs</li><li>Knowledge Distillation</li><li>Self-Supervised</li>
           </ul>
         </article>
 
         <article class="stack-cat reveal" style="--d:.2s">
           <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <h3>NLP &amp; LLMs</h3>
           <ul class="chips">
-            <li>RAG</li><li>LangChain</li><li>HuggingFace</li><li>Embeddings</li><li>Prompt Engineering</li><li>Fine-tuning (SFT · DPO · RLHF)</li>
+            <li>RAG</li><li>LangChain</li><li>HuggingFace</li><li>Embeddings</li><li>Fine-tuning (SFT · DPO · RLHF)</li>
           </ul>
         </article>
 
         <article class="stack-cat reveal" style="--d:.25s">
           <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v6H3zM3 15h18v6H3z"/><path d="M7 6h.01M7 18h.01"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
-          <h3>AI Systems</h3>
+          <h3>Computer Vision</h3>
           <ul class="chips">
-            <li>AI Agents</li><li>MCP</li><li>Real-time Decision Systems</li><li>Adaptive Feedback Loops</li>
+            <li>OpenCV</li><li>MediaPipe</li><li>YOLOv8</li><li>Pose Estimation</li><li>Segmentation</li>
           </ul>
         </article>
 
@@ -526,7 +751,7 @@
           </div>
           <h3>MLOps</h3>
           <ul class="chips">
-            <li>MLflow</li><li>ONNX / ONNX Runtime</li><li>TensorRT</li><li>Docker</li><li>Kubernetes</li><li>Model Serving</li><li>Drift Detection</li>
+            <li>MLflow</li><li>ONNX / TensorRT</li><li>Docker</li><li>Kubernetes</li><li>Model Serving</li><li>Drift Detection</li>
           </ul>
         </article>
 
@@ -536,7 +761,7 @@
           </div>
           <h3>Data Engineering</h3>
           <ul class="chips">
-            <li>Kafka</li><li>Apache Spark</li><li>Airflow</li><li>ETL Pipelines</li><li>Streaming</li><li>Feature Stores</li>
+            <li>Kafka</li><li>Apache Spark</li><li>Airflow</li><li>ETL Pipelines</li><li>Streaming</li>
           </ul>
         </article>
 
@@ -544,39 +769,19 @@
           <div class="stack-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 10h-1.26a8 8 0 1 0-11.62 9"/><path d="M22 19a4 4 0 0 1-4 4H6a5 5 0 0 1-2-9.55"/></svg>
           </div>
-          <h3>Cloud Platforms</h3>
+          <h3>Cloud</h3>
           <ul class="chips">
-            <li>GCP (Vertex AI · BigQuery)</li><li>AWS (SageMaker · Lambda · S3)</li><li>Azure (Azure ML · Databricks)</li><li>Firebase</li>
+            <li>GCP (Vertex AI · BigQuery)</li><li>AWS (SageMaker · Lambda)</li><li>Azure (Azure ML)</li>
           </ul>
         </article>
 
         <article class="stack-cat reveal" style="--d:.45s">
           <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><path d="M3 12v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M8 8h.01M12 8h.01"/></svg>
-          </div>
-          <h3>Frameworks &amp; Backend</h3>
-          <ul class="chips">
-            <li>FastAPI</li><li>Flask</li><li>Node.js</li><li>Express</li><li>React</li><li>Next.js</li><li>Flutter</li>
-          </ul>
-        </article>
-
-        <article class="stack-cat reveal" style="--d:.5s">
-          <div class="stack-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <h3>Databases</h3>
-          <ul class="chips">
-            <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Firebase / Firestore</li><li>SQL Server</li><li>Redis</li>
-          </ul>
-        </article>
-
-        <article class="stack-cat reveal" style="--d:.55s">
-          <div class="stack-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <h3>Cybersecurity</h3>
           <ul class="chips">
-            <li>QRadar</li><li>Splunk</li><li>ELK</li><li>CrowdStrike</li><li>Wireshark</li><li>SIEM / SOAR</li><li>EDR / XDR</li><li>Threat Intel</li><li>Penetration Testing</li>
+            <li>QRadar</li><li>Splunk</li><li>ELK</li><li>CrowdStrike</li><li>SIEM / SOAR</li><li>EDR / XDR</li><li>Penetration Testing</li>
           </ul>
         </article>
       </div>
@@ -584,8 +789,9 @@
 
     <!-- BACKGROUND -->
     <section class="section" id="background">
+      <span class="ghost-num" aria-hidden="true">06</span>
       <header class="section-head">
-        <span class="section-num">05</span>
+        <span class="section-num">06</span>
         <h2 class="section-title">Background<span class="accent">.</span></h2>
         <span class="section-rule"></span>
       </header>
@@ -596,17 +802,17 @@
           <h3 class="bg-col-title"><span class="mono small">// education</span></h3>
 
           <article class="bg-card">
-            <span class="bg-card-date mono">2024 - 2026</span>
-            <h4>M.Sc. - Intelligent Systems Engineering</h4>
+            <span class="bg-card-date mono">2024 — 2026</span>
+            <h4>M.Sc. — Intelligent Systems Engineering</h4>
             <p class="bg-card-org">Afeka College of Engineering, Tel Aviv</p>
-            <p class="bg-card-detail">Specialization: Intelligent Systems &amp; Data Science. Topics include Deep Learning, NLP, Computer Vision, Robotics, Reinforcement Learning, Big Data, Optimization, Cloud Technologies, and Statistical Analysis.</p>
+            <p class="bg-card-detail">Specialization: Intelligent Systems &amp; Data Science. Deep Learning, NLP, Computer Vision, Robotics, RL, Big Data, Optimization, Cloud, and Statistical Analysis.</p>
           </article>
 
           <article class="bg-card">
-            <span class="bg-card-date mono">2021 - 2024</span>
-            <h4>B.Sc. - Computer Science</h4>
+            <span class="bg-card-date mono">2021 — 2024</span>
+            <h4>B.Sc. — Computer Science</h4>
             <p class="bg-card-org">College of Law and Business, Ramat Gan</p>
-            <p class="bg-card-detail">Specialization: Artificial Intelligence &amp; Machine Learning. Coursework: Algorithms &amp; Data Structures, AI, NLP, ML, Deep Learning, Big Data, Cryptography, Operating Systems, Database Systems, Linear Algebra I &amp; II, Advanced Calculus, Probability &amp; Statistics, Discrete Math.</p>
+            <p class="bg-card-detail">Specialization: AI &amp; Machine Learning. Algorithms, AI, NLP, ML, Deep Learning, Big Data, Cryptography, OS, Databases, Linear Algebra, Calculus, Probability &amp; Statistics.</p>
           </article>
         </div>
 
@@ -646,8 +852,8 @@
 
           <article class="bg-card service">
             <span class="bg-card-date mono">IDF Special Forces</span>
-            <h4>Combat First Sergeant - Sayeret Nahal</h4>
-            <p class="bg-card-detail">Led combat teams during high-risk operations. Trained and managed dozens of soldiers, fostering operational discipline and resilience. Strong interpersonal leadership through real-time coordination and high-stakes problem-solving.</p>
+            <h4>Combat First Sergeant — Sayeret Nahal</h4>
+            <p class="bg-card-detail">Led combat teams during high-risk operations. Trained and managed dozens of soldiers, fostering operational discipline and resilience through real-time coordination and high-stakes problem-solving.</p>
           </article>
 
           <article class="bg-card lang">
@@ -663,8 +869,9 @@
 
     <!-- CONTACT -->
     <section class="section section-contact" id="contact">
+      <span class="ghost-num" aria-hidden="true">07</span>
       <header class="section-head">
-        <span class="section-num">06</span>
+        <span class="section-num">07</span>
         <h2 class="section-title">Contact<span class="accent">.</span></h2>
         <span class="section-rule"></span>
       </header>
@@ -682,10 +889,6 @@
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
             <span>o.bensimon@adversa.ai</span>
           </a>
-          <a class="btn btn-ghost magnet" href="tel:+972584000183">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span>+972-584000183</span>
-          </a>
           <a class="btn btn-ghost magnet" href="https://www.linkedin.com/in/omer-ben-simon/" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
             <span>LinkedIn</span>
@@ -700,16 +903,25 @@
   </main>
 
   <footer class="footer">
+    <div class="footer-marquee" data-speed="0.4" data-dir="rtl">
+      <div class="marquee-track">
+        <span>Let's build it <i>◆</i> </span>
+      </div>
+    </div>
     <div class="footer-inner">
       <div class="footer-left">
         <span class="brand-mark sm">O</span>
         <span>© <span id="year">2026</span> Omer Ben Simon</span>
       </div>
       <div class="footer-right mono">
+        built from scratch · no template
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
   <script src="main.js" defer></script>
 </body>
 </html>
